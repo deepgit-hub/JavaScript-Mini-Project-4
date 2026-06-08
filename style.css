@@ -8,3 +8,13 @@
   left:0px;
   opacity: 0.8;
 }
+.popup
+{
+    background-color: aquamarine;
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    padding: 20;
+    border-radius: 25px;
+    left: 30%;
+}
