@@ -7,6 +7,7 @@
   top:0px;
   left:0px;
   opacity: 0.8;
+  display: none;
 }
 .popup
 {
@@ -17,4 +18,5 @@
     padding: 20;
     border-radius: 25px;
     left: 30%;
+  display: none;
 }
