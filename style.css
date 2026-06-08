@@ -1,1 +1,26 @@
+*{
+  margin: 0px;
+  padding: 0px;
 
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+.navbar{
+  background-color: #FD6569;
+  padding: 10px;
+}
+.container
+{
+  padding: 10px;
+
+}
+.book-container
+{
+  padding: 15px;
+  width: 25%;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  margin: 30px;
+}
