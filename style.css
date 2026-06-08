@@ -51,3 +51,25 @@ body {
   z-index: 1;
 
 }
+.popup-box
+{
+  background-color:#FD6569;
+  width: 40%;
+  padding: 40px;
+  border-radius: 10px;
+  position: absolute;
+  top:20%;
+  left:20%;
+  z-index: 2;
+}
+
+.popup-box input
+{
+  background: transparent;
+  border: none;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+  border-bottom: solid black 
+}
