@@ -24,6 +24,22 @@ body {
   color: white;
   margin: 30px;
 }
+.book-container h2{
+  color: #FD6569;
+
+}
+.book-container button
+{
+  background-color: #FD6569;
+  color: black;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  border: none;
+}
 .add-btn
 {
   background-color: #FD6569;
@@ -59,11 +75,27 @@ body {
   border-radius: 10px;
   position: absolute;
   top:20%;
-  left:20%;
+  left:28%;
   z-index: 2;
 }
 
-.popup-box input
+.popup-box input 
+{
+  background: transparent;
+  border: none;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  border-bottom: solid black 
+}
+.popup-box input::placeholder
+{
+  color: black;
+  font-size: 10px;
+}
+.popup-box textarea
 {
   background: transparent;
   border: none;
@@ -71,5 +103,24 @@ body {
   margin: 5px;
   padding: 5px;
   font-size: 20px;
-  border-bottom: solid black 
+  border: solid black 
+}
+.popup-box textarea::placeholder
+{
+  color: black;
+  font-size: 10px;
+}
+
+.popup-box button
+{
+  background-color: #1d26cd;
+  border: none;
+  color: rgb(246, 237, 237);
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  
 }
