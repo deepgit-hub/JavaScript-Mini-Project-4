@@ -23,6 +23,7 @@ body {
   border-radius: 10px;
   color: white;
   margin: 30px;
+  display: inline-block;
 }
 .book-container h2{
   color: #FD6569;
