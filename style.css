@@ -1,130 +1,189 @@
 *{
-  margin: 0px;
-  padding: 0px;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    background:#050505;
+    color:#00ff41;
+    font-family: 'Orbitron', sans-serif;
 }
-body {
-  font-family: "Oswald", sans-serif;
-}
+
+
+/* Navbar */
+
 .navbar{
-  background-color: #FD6569;
-  padding: 10px;
+    background:#0a0a0a;
+    border-bottom:2px solid #00ff41;
+    padding:20px;
+    box-shadow:0 0 20px #00ff41;
 }
-.container
-{
-  padding: 10px;
 
+.navbar h1{
+    color:#00ff41;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
-.book-container
-{
-  padding: 15px;
-  width: 25%;
-  background-color: black;
-  border-radius: 10px;
-  color: white;
-  margin: 30px;
-  display: inline-block;
-  vertical-align: top;
+
+/* Container */
+
+.container{
+    padding:30px;
 }
+
+/* Book Cards */
+
+.book-container{
+    width:300px;
+    min-height:250px;
+    background:#0d0d0d;
+    border:1px solid #00ff41;
+    border-radius:15px;
+    padding:20px;
+    margin:20px;
+    display:inline-block;
+    vertical-align:top;
+    box-shadow:0 0 20px rgba(0,255,65,0.3);
+    transition:0.3s;
+}
+
+.book-container:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #00ff41;
+}
+
 .book-container h2{
-  color: #FD6569;
-
-}
-.book-container button
-{
-  background-color: #FD6569;
-  color: black;
-  border-radius: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 10px;
-  border: none;
-}
-.add-btn
-{
-  background-color: #FD6569;
-  color: black;
-  border-radius: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 40px;
-  border: none;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-}
-.popup-overlay
-{
-  background-color: black;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left: 0;
-  z-index: 1;
-  display: none;
-
-}
-.popup-box
-{
-  background-color:#FD6569;
-  width: 40%;
-  padding: 40px;
-  border-radius: 10px;
-  position: absolute;
-  top:20%;
-  left:28%;
-  z-index: 2;
-  display: none;
+    color:#00ff41;
+    margin-bottom:10px;
 }
 
-.popup-box input 
-{
-  background: transparent;
-  border: none;
-  width: 100%;
-  margin: 5px;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: 20px;
-  border-bottom: solid black 
-}
-.popup-box input::placeholder
-{
-  color: black;
-  font-size: 10px;
-}
-.popup-box textarea
-{
-  background: transparent;
-  border: none;
-  width: 100%;
-  margin: 5px;
-  padding: 5px;
-  font-size: 20px;
-  border: solid black 
-}
-.popup-box textarea::placeholder
-{
-  color: black;
-  font-size: 10px;
+.book-container h5{
+    color:#8affaa;
+    margin-bottom:15px;
 }
 
-.popup-box button
-{
-  background-color: #0f1012;
-  border: none;
-  color: rgb(246, 237, 237);
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 20px;
-  border-radius: 10px;
-  
+.book-container p{
+    color:#d0ffd8;
+    line-height:1.6;
+}
+
+/* Delete Button */
+
+.book-container button{
+    background:#00ff41;
+    color:black;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    margin-top:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.book-container button:hover{
+    background:white;
+}
+
+/* Floating Add Button */
+
+.add-btn{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#00ff41;
+    color:black;
+    border:none;
+    font-size:40px;
+    font-weight:bold;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    cursor:pointer;
+    box-shadow:0 0 25px #00ff41;
+    transition:0.3s;
+}
+
+.add-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Overlay */
+
+.popup-overlay{
+    background:rgba(0,0,0,0.85);
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    display:none;
+}
+
+/* Popup */
+
+.popup-box{
+    width:450px;
+    background:#0d0d0d;
+    border:2px solid #00ff41;
+    border-radius:15px;
+    padding:30px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    display:none;
+    box-shadow:0 0 35px rgba(0,255,65,0.5);
+}
+
+.popup-box h2{
+    color:#00ff41;
+    margin-bottom:15px;
+}
+
+/* Inputs */
+
+.popup-box input,
+.popup-box textarea{
+    width:100%;
+    background:#050505;
+    color:#00ff41;
+    border:1px solid #00ff41;
+    padding:12px;
+    margin-top:12px;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+.popup-box input::placeholder,
+.popup-box textarea::placeholder{
+    color:#5aff7f;
+}
+
+.popup-box textarea{
+    resize:none;
+    height:120px;
+}
+
+/* Buttons */
+
+.popup-box button{
+    background:#00ff41;
+    color:black;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    margin-top:15px;
+    margin-right:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.popup-box button:hover{
+    background:white;
 }
