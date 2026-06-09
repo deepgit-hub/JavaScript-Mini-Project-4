@@ -24,6 +24,7 @@ body {
   color: white;
   margin: 30px;
   display: inline-block;
+  vertical-align: top;
 }
 .book-container h2{
   color: #FD6569;
@@ -66,6 +67,7 @@ body {
   top:0;
   left: 0;
   z-index: 1;
+  display: none;
 
 }
 .popup-box
@@ -78,6 +80,7 @@ body {
   top:20%;
   left:28%;
   z-index: 2;
+  display: none;
 }
 
 .popup-box input 
@@ -114,7 +117,7 @@ body {
 
 .popup-box button
 {
-  background-color: #1d26cd;
+  background-color: #0f1012;
   border: none;
   color: rgb(246, 237, 237);
   padding-right: 25px;
