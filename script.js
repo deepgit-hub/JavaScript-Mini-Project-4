@@ -18,6 +18,9 @@ cancel.addEventListener("click",function(event)
     event.preventDefault()
     pop.style.display="none"
     overlay.style.display="none"
+    bt.value=""
+    ba.value=""
+    sd.value=""
 })
 add.addEventListener("click",function()
 {
