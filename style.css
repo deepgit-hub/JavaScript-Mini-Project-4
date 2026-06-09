@@ -5,78 +5,86 @@
 }
 
 body{
-    background:#050505;
+    background:#030303;
     color:#00ff41;
-    font-family: 'Orbitron', sans-serif;
+    font-family:'Share Tech Mono', monospace;
+    min-height:100vh;
 }
 
-
-/* Navbar */
+/* NAVBAR */
 
 .navbar{
-    background:#0a0a0a;
+    background:#050505;
     border-bottom:2px solid #00ff41;
     padding:20px;
-    box-shadow:0 0 20px #00ff41;
+    box-shadow:0 0 20px rgba(0,255,65,0.5);
 }
 
 .navbar h1{
-    color:#00ff41;
-    letter-spacing:3px;
+    font-family:'Orbitron', sans-serif;
+    font-size:40px;
+    letter-spacing:4px;
     text-transform:uppercase;
+    text-shadow:
+        0 0 5px #261e92,
+        0 0 10px #0e2a66,
+        0 0 20px #0a0e80;
 }
 
-/* Container */
+/* CONTAINER */
 
 .container{
     padding:30px;
 }
 
-/* Book Cards */
+/* BOOK CARDS */
 
 .book-container{
-    width:300px;
+    width:320px;
     min-height:250px;
-    background:#0d0d0d;
+    background:#0a0a0a;
     border:1px solid #00ff41;
     border-radius:15px;
     padding:20px;
     margin:20px;
     display:inline-block;
     vertical-align:top;
-    box-shadow:0 0 20px rgba(0,255,65,0.3);
-    transition:0.3s;
+    box-shadow:0 0 15px rgba(17, 25, 189, 0.25);
+    transition:all 0.3s ease;
 }
 
 .book-container:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px #00ff41;
+    transform:translateY(-8px);
+    box-shadow:
+        0 0 15px #00ff41,
+        0 0 30px rgba(0,255,65,0.5);
 }
 
 .book-container h2{
+    font-family:'Orbitron', sans-serif;
     color:#00ff41;
     margin-bottom:10px;
 }
 
 .book-container h5{
-    color:#8affaa;
-    margin-bottom:15px;
+    color:#7dff9b;
+    margin-bottom:12px;
 }
 
 .book-container p{
-    color:#d0ffd8;
+    color:#d4ffd8;
     line-height:1.6;
 }
 
-/* Delete Button */
+/* DELETE BUTTON */
 
 .book-container button{
     background:#00ff41;
     color:black;
     border:none;
     padding:10px 18px;
-    border-radius:8px;
     margin-top:15px;
+    border-radius:8px;
     font-weight:bold;
     cursor:pointer;
     transition:0.3s;
@@ -84,24 +92,27 @@ body{
 
 .book-container button:hover{
     background:white;
+    box-shadow:0 0 10px #00ff41;
 }
 
-/* Floating Add Button */
+/* ADD BUTTON */
 
 .add-btn{
     width:80px;
     height:80px;
     border-radius:50%;
+    border:none;
     background:#00ff41;
     color:black;
-    border:none;
     font-size:40px;
     font-weight:bold;
     position:fixed;
-    bottom:30px;
     right:30px;
+    bottom:30px;
     cursor:pointer;
-    box-shadow:0 0 25px #00ff41;
+    box-shadow:
+        0 0 15px #0e12cf,
+        0 0 25px rgba(41, 23, 205, 0.5);
     transition:0.3s;
 }
 
@@ -109,7 +120,7 @@ body{
     transform:scale(1.1);
 }
 
-/* Overlay */
+/* OVERLAY */
 
 .popup-overlay{
     background:rgba(0,0,0,0.85);
@@ -122,11 +133,11 @@ body{
     display:none;
 }
 
-/* Popup */
+/* POPUP BOX */
 
 .popup-box{
+    background:#0a0a0a;
     width:450px;
-    background:#0d0d0d;
     border:2px solid #00ff41;
     border-radius:15px;
     padding:30px;
@@ -136,27 +147,36 @@ body{
     transform:translate(-50%,-50%);
     z-index:2;
     display:none;
-    box-shadow:0 0 35px rgba(0,255,65,0.5);
+    box-shadow:
+        0 0 15px #091db1,
+        0 0 35px rgba(41, 12, 206, 0.4);
 }
 
 .popup-box h2{
-    color:#00ff41;
+    font-family:'Orbitron', sans-serif;
     margin-bottom:15px;
+    color:#00ff41;
+    text-shadow:0 0 10px #00ff41;
 }
 
-/* Inputs */
+/* INPUTS */
 
 .popup-box input,
 .popup-box textarea{
     width:100%;
-    background:#050505;
+    background:#030303;
     color:#00ff41;
     border:1px solid #00ff41;
+    border-radius:8px;
     padding:12px;
     margin-top:12px;
-    border-radius:8px;
+    font-family:'Share Tech Mono', monospace;
     outline:none;
-    font-size:15px;
+}
+
+.popup-box textarea{
+    height:120px;
+    resize:none;
 }
 
 .popup-box input::placeholder,
@@ -164,12 +184,12 @@ body{
     color:#5aff7f;
 }
 
-.popup-box textarea{
-    resize:none;
-    height:120px;
+.popup-box input:focus,
+.popup-box textarea:focus{
+    box-shadow:0 0 10px #00ff41;
 }
 
-/* Buttons */
+/* POPUP BUTTONS */
 
 .popup-box button{
     background:#00ff41;
@@ -179,11 +199,51 @@ body{
     border-radius:8px;
     margin-top:15px;
     margin-right:10px;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
     transition:0.3s;
 }
 
 .popup-box button:hover{
     background:white;
+    box-shadow:0 0 10px #00ff41;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:black;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff41;
+    border-radius:10px;
+}
+@media screen and (max-width: 768px){
+
+    .book-container{
+        width:90%;
+        margin:15px auto;
+        display:block;
+    }
+
+    .popup-box{
+        width:90%;
+        left:50%;
+    }
+
+    .navbar h1{
+        font-size:28px;
+    }
+
+    .add-btn{
+        width:65px;
+        height:65px;
+        font-size:32px;
+    }
+
 }
