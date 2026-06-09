@@ -21,6 +21,18 @@ cancel.addEventListener("click",function(event)
 })
 add.addEventListener("click",function()
 {
-    var d = document.createElement("div")
-    
+    event.preventDefault()
+    var div = document.createElement("div")
+    div.setAttribute("class","book-container")
+    div.innerHTML="<h2>"+bt.value+"</h2>"+"<h5>"+ba.value+"</h5>"+"<p>"+sd.value+"</p>"+"<button onclick=deletei(event)>Delete</button>"
+    con.append(div)
+    pop.style.display="none"
+    overlay.style.display="none"
+    bt.value=""
+    ba.value=""
+    sd.value=""
 })
+function deletei(event)
+{
+    event.target.parentElement.remove()
+}
