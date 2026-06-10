@@ -39,3 +39,13 @@ function deletei(event)
 {
     event.target.parentElement.remove()
 }
+function editi(event)
+{
+    pop.style.display="block"
+    overlay.style.display="block"
+    var val = event.target.parentElement
+    bt.value = val.children[0].textContent
+    ba.value = val.children[1].textContent
+    sd.value = val.children[2].textContent
+    val.remove()
+}
